@@ -22,18 +22,12 @@ const App = () => {
     }
   ]);
   function handleComplete(id) {
-    const updatedTodos = todos.map(todo => {
-      if (todo.id === id) {
-        return { ...todo, completed: true };
-      }
-      return todo;
-    });
+    const updatedTodos = todos.map(todo => todo.id === id ? { ...todo, completed: true } : todo);
     setTodos(updatedTodos);
   }
 
   return (
     <div>
-      <h1>Parent Component</h1>
       <TodoList todos={todos} handleComplete={handleComplete} />
     </div>
   )
