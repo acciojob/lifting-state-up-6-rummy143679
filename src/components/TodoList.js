@@ -1,12 +1,9 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
-const TodoList = ({todos, handleComplete}) => {
-    console.log("TodoList component rendered", todos);
-    // const todos = props.data;
-    // const handleComplete = props.handleComplete;
+const TodoList = ({ todos, handleComplete }) => {
     return (
         <div>
-            <h2>Todo List</h2>
+            <h2>Child Component</h2>
             <ul>
                 {todos.map((item, ind) => {
                     return (

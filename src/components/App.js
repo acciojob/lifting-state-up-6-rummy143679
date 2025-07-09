@@ -22,7 +22,6 @@ const App = () => {
     }
   ]);
   function handleComplete(id) {
-    console.log("Todo completed with id:", id);
     const updatedTodos = todos.map(todo => {
       if (todo.id === id) {
         return { ...todo, completed: true };
@@ -34,7 +33,6 @@ const App = () => {
 
   return (
     <div>
-      {/* Do not remove the main div */}
       <h1>Parent Component</h1>
       <TodoList todos={todos} handleComplete={handleComplete} />
     </div>
